@@ -5,6 +5,7 @@ pipeline {
          agent any
          when {
             branch 'staging'
+            beforeAgent true
          }
          steps {
             echo 'Create Release Pack' 
@@ -18,6 +19,7 @@ pipeline {
          agent any
          when {
             branch 'uat'
+            beforeAgent true
          }
          steps {
             echo 'Create Release Pack' 
