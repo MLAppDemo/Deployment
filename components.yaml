@@ -1,6 +1,6 @@
 components:
 - name: WebInterface
-  version: 2.3.17
+  version: 2.3.18
   image: mla-webui
 - name: Accounts WebUI
   version: 4.1.12
