@@ -5,6 +5,7 @@ pipeline {
          agent any
          when {
             branch 'staging'
+            beforeAgent true
          }
          steps {
             echo 'Create Release Pack' 
@@ -14,20 +15,11 @@ pipeline {
             gateProducesArtifact file: 'components.yaml'
          }
       }
-      stage('UAT Deployment Setup') {
-         agent any
-         when {
-            branch 'uat'
-         }
-         steps {
-            echo 'Create Release Pack' 
-            gateConsumesArtifact file: 'components.yaml'
-         }
-      }
       stage('Deploy') {
          agent any
          steps {
             echo 'Deployment'
+            gateConsumesArtifact file: 'components.yaml'
          }
       }
    }
