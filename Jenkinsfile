@@ -10,7 +10,7 @@ pipeline {
             echo 'Create Release Pack' 
             sh 'tar czvf release.tgz README.md components.yaml'
             
-            archiveArtifacts artifacts: 'release.tgz'
+            // archiveArtifacts artifacts: 'release.tgz'
             gateProducesArtifact file: 'release.tgz'
          }
       }
