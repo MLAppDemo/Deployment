@@ -6,5 +6,5 @@ components:
   version: 4.1.13
   image: mla-accounts-frontend
 - name: Accounts API Service
-  version: 1.1.6
+  version: 1.2.7
   image: mla-accounts-api

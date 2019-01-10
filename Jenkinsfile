@@ -17,6 +17,10 @@ pipeline {
       }
       stage('Deploy') {
          agent any
+         when { 
+            beforeAgent true
+            not { branch 'pr*' } 
+         }
          steps {
             echo 'Deployment'
             gateConsumesArtifact file: 'components.yaml'
