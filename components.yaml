@@ -3,8 +3,8 @@ components:
   version: 2.3.18
   image: mla-webui
 - name: Accounts WebUI
-  version: 4.1.13
+  version: 4.2.22
   image: mla-accounts-frontend
 - name: Accounts API Service
-  version: 1.2.7
+  version: 1.2.9
   image: mla-accounts-api
